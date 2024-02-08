@@ -222,7 +222,7 @@ a {
 	height: 20px;
 }
 
-@media (max-width: 750px) {
+@media (max-width: 767px) {
 	.hero-section {
 		display: flex;
 		flex-direction: column;
@@ -242,6 +242,10 @@ a {
 	.inner-thumbnail {
 		padding: 50px;
 		padding-left: 0;
+	}
+
+	.inner-thumbnail img {
+		height: 250px;
 	}
 }
 
@@ -295,18 +299,24 @@ a {
 		var(--color-bg-gradient) 5%,
 		rgba(10, 10, 10, 0) 20%
 	);
-	background: radial-gradient(
+	/* background: radial-gradient(
 		55% 180% at 5% 100%,
 		var(--color-bg-gradient) 0,
 		rgba(10, 10, 10, 0) 75%,
 		rgba(10, 10, 10, 0) 100%
+	); */
+	background: radial-gradient(
+		25% 180% at 5% 100%,
+		var(--color-bg-gradient) 0,
+		rgba(1, 1, 1, 0) 65%,
+		rgba(2, 1, 10, 0) 100%
 	);
 	background-color: #0a0a0a;
 	height: fit-content;
 	/* margin: 0 auto; */
 }
 
-h2 {
+.project-section h2 {
 	font-size: 20px;
 	text-align: center;
 	color: #ffeffe;
@@ -326,8 +336,8 @@ h2 {
 }
 
 .project-card {
-	width: 300px;
-	background-color: #fff;
+	width: 333px;
+	/* background-color: #fff; */
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	margin: 20px;
 	overflow: hidden;
@@ -340,20 +350,23 @@ h2 {
 	padding-bottom: 56.25%; /* 16:9 aspect ratio */
 	background-position: center;
 	background-size: cover;
+	border-radius: 10px;
 }
 
 .content {
-	padding: 16px;
+	padding: 8px 6px;
+	background-color: transparent;
 }
 
 .content h2 {
 	font-size: 1.2em;
-	margin: 0;
-	color: #333;
+	color: #ffeffe;
+	text-align: left;
 }
 
 .content p {
-	font-size: 0.9em;
+	font-size: 0.8em;
+	padding-top: 4px;
 	color: #666;
 }
 
@@ -377,5 +390,62 @@ h2 {
 @media only screen and (max-width: 600px) {
 	.project-card {
 		width: 100%; /* One card per row on smaller screens */
+	}
+}
+
+/* skills */
+
+.main-skills {
+	padding: 40px;
+}
+
+.logo {
+	margin: 10px;
+	width: 150px;
+	height: auto;
+	max-width: 100%;
+}
+
+.text {
+	color: white;
+	font-family: sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+
+.main-grid-pad {
+	padding-top: 60px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.skill {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+	.grid-container {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+@media (min-width: 640px) {
+	.grid-container {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+@media (min-width: 768px) {
+	.grid-container {
+		grid-template-columns: repeat(6, minmax(0, 1fr));
 	}
 }
