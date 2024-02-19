@@ -9,21 +9,23 @@
 <body>
 
     <!-- navbar -->
-    <div class="container"> 
-        <nav class="navbar">
-          <img class="nav-branding" src="assets/MG.png" alt="">
+      <!-- <div class="container" >  -->
+        <div id="home"></div>
+        <nav class="navbar" id="navbar" >
+          
+          <img class="nav-branding" src="assets/MG-logo.png" alt="" id="logo">
           <ul class="nav-menu">
             <li class="nav-item">
-              <a href="#" class="nav-link">Home</a>
+              <a href="#home" class="nav-link active">Home</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Projects</a>
+              <a href="#projects" class="nav-link">Projects</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">About Us</a>
+              <a href="#skills" class="nav-link">Skills</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">Contact</a>
+              <a href="#contact" class="nav-link">Contact</a>
             </li>
           </ul>
           <div class="hamburger">
@@ -32,24 +34,24 @@
             <span class="bar"></span>
           </div>
         </nav>
-     </div>
-   </header>
+      <!-- </div> -->
+  
 
-   <!-- hero -->
+    <!-- hero -->
 
     <main>
 
-        <div class="hero-section">
+        <div id="home" class="hero-section cont">
             <div class="left-content grid-item">
-                <!-- <span class="hey-there">Hey there everyone!</span> -->
                 <h1 class="myself">
                     <span>I’m Mohit Goswami, Web Developer by ♥️ and programmer by profession.</span>
                 </h1>
                 <p class="describe-myself">
-                    Hi, I am Mohit, full-stack developer from india, with expertise in React, Node.js, MongoDB. Ready to create innovative web solutions! 
+                    Hi, I am a full-stack developer from india, with expertise in React, Node.js, MongoDB. Ready to create innovative web solutions! 
                 </p>
 
-                <button class="download-resume"> <span>Resume</span> <img src="assets/arrow.png" alt=""></button>
+                <a href="assets/Mohit's Resume.pdf" download="Resume.pdf"><button class="download-resume"> <span>Resume</span> <img src="assets/arrow.png" alt=""></button>
+                </a>
             </div>
             <div class="thumbnail grid-item">
                 <div class="inner-thumbnail">                  
@@ -65,10 +67,9 @@
     </main>
 
     <!-- project-section -->
-
-      <div class="project-section">
+      <div id="projects" class="project-section cont">
         <div class="inner-project-section">
-          <h2>Some of my latest works</h2>
+          <h2 class="inner-proj-h2">Some of my latest works</h2>
 
           <div class="card-container">
 
@@ -95,6 +96,20 @@
                 <p>Replica of Riot Games Website created using HTML, CSS and JavaScript</p>            
               </div>
             </div>
+            <div class="project-card">
+              <div class="project-thumbnail" style="background-image: url('./assets/valo-web-img.png');"></div>
+              <div class="content">
+                <h2>Riot Games UI clone </h2>
+                <p>Replica of Riot Games Website created using HTML, CSS and JavaScript</p>            
+              </div>
+            </div>
+            <div class="project-card">
+              <div class="project-thumbnail" style="background-image: url('./assets/valo-web-img.png');"></div>
+              <div class="content">
+                <h2>Riot Games UI clone </h2>
+                <p>Replica of Riot Games Website created using HTML, CSS and JavaScript</p>            
+              </div>
+            </div>
 
           </div>
         </div>    
@@ -102,69 +117,115 @@
 
       <!-- skills section -->
 
-      <div class="skills-section">
+      <div id="skills" class="skills-section cont">
         <div class="main-skills">
-          <h2>Skills</h2>
+          
 
           <div class="main-grid-pad">
+            <div class="skill-title">
+              <h2>Skills</h2>
+            </div>
             <div class="grid-container ">
+              
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/html-124-svgrepo-com (3).svg " alt="Skill 1">
+                <p class="text">HTML</p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/css3-svgrepo-com.svg  " alt="Skill 1">
+                <p class="text">CSS</p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/javascript-svgrepo-com.svg  " alt="Skill 1">
+                <p class="text">JavaScript</p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/typescript-svgrepo-com.svg " alt="Skill 1">
+                <p class="text">TypeScript</p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/express-svgrepo-com.svg  " alt="Skill 1">
+                <p class="text">Express</p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/node-js-svgrepo-com (3).svg " alt="Skill 1">
+                <p class="text">Node</p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/react-svgrepo-com.svg  " alt="Skill 1">
+                <p class="text">React</p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/api-svgrepo-com.svg  " alt="Skill 1">
+                <p class="text">REST</p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/mongodb-svgrepo-com (1).svg  " alt="Skill 1">
+                <p class="text">MongoDB </p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/postgresql-logo-svgrepo-com.svg  " alt="Skill 1">
+                <p class="text">Postgres</p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/tailwind-css-svgrepo-com (1).svg " alt="Skill 1">
+                <p class="text">Tailwind</p>
               </div>
               <div class="grid-item skill">
-                <img class="logo" src="./assets/react.svg  " alt="Skill 1">
-                <p class="text">Skill 1</p>
+                <img class="logo" src="./assets/bootstrap-fill-svgrepo-com (1).svg " alt="Skill 1">
+                <p class="text">Bootstrap</p>
               </div>
             </div>
           </div>
-
         </div>
+      </div>
 
+      <!-- contact me -->
 
-        
-
-        
+      <div class="contact cont" id="contact">
+        <div class="contact-container">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="contact-left"
+          >
+            <div class="contact-left-title">
+              <h2>Get in Touch</h2>
+              <hr />
+            </div>
+                    <input type="hidden" name="access_key" value="8ca729c1-f6c8-4e61-8bb8-7a1d1a497027">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              class="contact-inputs"
+              required
+            />
+            <input
+              type="email"
+              name="name"
+              placeholder="Your Email"
+              class="contact-inputs"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              class="contact-inputs"
+              required
+            ></textarea>
+            <button type="submit">
+              Submit
+              <img
+                src="assets/arrow_icon.png"
+                alt=""
+              />
+            </button>
+          </form>
+          <div class="contact-right">
+            <img src="assets/right_img.png" alt="">
+          </div>
+        </div>
       </div>
 
     <script src="index.js"></script>
