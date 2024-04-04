@@ -71,6 +71,8 @@ a {
 	background-color: transparent;
 	transition: background-color 0.5s ease;
 	padding: 10px 70px 0 44px;
+	opacity: 1;
+	z-index: 111;
 }
 
 .navbar img {
@@ -187,6 +189,7 @@ a {
 	display: flex;
 	/* gap: 5rem; */
 	flex-direction: column;
+	opacity: 0;
 }
 
 .left-content p {
@@ -196,9 +199,43 @@ a {
 	text-align: left;
 }
 
+.left-content {
+	animation: fade-in 1s ease-in-out forwards;
+}
+
+.thumbnail {
+	animation: slide-up 1s ease-in-out forwards;
+}
+
+.thumbnail img {
+	max-width: 200px;
+	border-radius: 50%;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slide-up {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 .thumbnail {
 	flex: 0 0 50%;
 	text-align: center;
+	opacity: 0;
 }
 
 .thumbnail img {
@@ -620,5 +657,56 @@ a {
 	}
 	.contact-right {
 		display: none;
+	}
+}
+
+.resume-decrese {
+	width: fit-content;
+}
+
+/* not confirm nav bar animation */
+
+ul {
+	/* margin: 150px auto 0; */
+	/* padding: 0; */
+	list-style: none;
+	display: table;
+	/* width: 600px; */
+	text-align: center;
+}
+li {
+	display: table-cell;
+	position: relative;
+	padding: 15px 0;
+}
+a {
+	color: #fff;
+	/* text-transform: uppercase; */
+	text-decoration: none;
+	letter-spacing: 0.15em;
+
+	display: inline-block;
+	padding: 15px 20px;
+	position: relative;
+}
+a:after {
+	background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: '';
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	background: #fff;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+a:hover:after {
+	width: 100%;
+	left: 0;
+}
+@media screen and (max-height: 300px) {
+	ul {
+		margin-top: 40px;
 	}
 }
