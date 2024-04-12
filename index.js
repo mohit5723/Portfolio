@@ -77,3 +77,18 @@ window.addEventListener('scroll', function () {
 		}
 	});
 });
+
+// reveal landing
+
+// Add this JavaScript code to your existing script.js file or equivalent
+document.addEventListener('DOMContentLoaded', function () {
+	// Triggers the animation by adding a class to the container
+	document.querySelector('.hero-section').classList.add('animate');
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+	// Show text and image
+	document.querySelector('.left-content').style.opacity = 1;
+	document.querySelector('.thumbnail').style.opacity = 1;
+	document.querySelector('.thumbnail').style.transform = 'translateY(0)';
+});
